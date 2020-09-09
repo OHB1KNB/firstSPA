@@ -1,31 +1,19 @@
 import React from 'react';
-import Header from "./startpage/header";
-import Footer from "./startpage/footer";
-import AnimalsList from "./Animals/AnimalsList";
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
+import Content from "./components/content/content";
 
 function App() {
-    const Animals = [
-        {
-            id: 1,
-            title: 'Cats',
-            content: 'meow'
-        },
-        {
-            id: 2,
-            title: 'Dogs',
-            content: 'gav'
-        },
-        {
-            id: 3,
-            title: 'Hamsters',
-            content: 'no sound'
-        }
-    ]
+
   return (
       <div>
-        <Header ourAnimals = {Animals}></Header>
-        <AnimalsList ourAnimals = {Animals}></AnimalsList>
-        <Footer></Footer>
+        <Header
+            // pages = {pagesData}
+            />
+        <Content
+            // page = {currentPageData} берётся из pagesData
+            />
+        <Footer/>
       </div>
   )
 }
