@@ -5,15 +5,20 @@ import Content from "./components/content/content";
 import pagesData from "./mocks/pages.json"
 
 function App() {
-    const [currentPageID, setPageID] = useState(0)
+    const [currentPage, switchCurrentPage] = useState(0);
+
+    const onSelectPageHandler = (index) => {
+        switchCurrentPage(index);
+    }
 
     return (
       <div>
         <Header
             pages = {pagesData}
+            onChangePage = {onSelectPageHandler}
             />
           <Content
-            page = {pagesData[currentPageID]}
+            page = {pagesData[currentPage]}
             />
         <Footer/>
       </div>

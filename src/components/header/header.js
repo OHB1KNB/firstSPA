@@ -7,7 +7,7 @@ export default function Header(props) {
             <ul id="nav-mobile" className="left hide-on-med-and-down">
                 {props.pages.map((page) => {
                     // взять button c materialize
-                    return <li key={page.id}><button id={page.id}>{page.title}</button></li>
+                    return <li key={page.id} onClick={() => props.onChangePage(page.id-1)}><button>{page.title}</button></li>
                 })}
             </ul>
         </div>
