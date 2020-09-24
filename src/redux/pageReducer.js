@@ -1,7 +1,15 @@
+import { SWITCH_PAGE } from './types';
+import initPages from '../mocks/pages.json';
+
 const initialState = {
-    currentPageID: 0
+    pages: initPages,
+    currentPage: 0
 };
 
 export const pageReducer = (state=initialState, action) => {
-    return state
+    switch (action.type) {
+        case SWITCH_PAGE:
+            return {...state, currentPage: action.payload};
+        default: return state;
+    }
 };

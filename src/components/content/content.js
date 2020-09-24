@@ -1,14 +1,24 @@
 import React from 'react';
+import { connect } from 'react-redux'
 
-export default function Content({ page }) {
+const mapStateToProps = state => {
+    return {
+        myPage: state.pages.pages,
+        myCurrentPage: state.pages.currentPage
+    };
+};
+
+const Content = ({ myPage, myCurrentPage }) => {
     return (
         <div>
             <h1>
-                {page.title}
+                {myPage[myCurrentPage].title}
             </h1>
             <div>
-                {page.content}
+                {myPage[myCurrentPage].content}
             </div>
         </div>
     );
 };
+
+export default connect(mapStateToProps, null)(Content);
