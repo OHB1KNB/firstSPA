@@ -1,16 +1,25 @@
-import React from "react";
+import React from 'react';
 
-export default function Header(props) {
+export default function Header({ pages, onChangePage }) {
     return (
-    <nav>
-        <div className="nav-wrapper">
-            <ul id="nav-mobile" className="left hide-on-med-and-down">
-                {props.pages.map((page) => {
-                    // взять button c materialize
-                    return <li key={page.id} onClick={() => props.onChangePage(page.id-1)}><button>{page.title}</button></li>
-                })}
-            </ul>
-        </div>
-    </nav>
-    )
-}
+        <nav>
+            <div className="nav-wrapper">
+                <ul
+                    id="nav-mobile"
+                    className="left hide-on-med-and-down"
+                >
+                    {pages.map(({ id, title }) => (
+                        <li
+                            key={id}
+                            onClick={() => onChangePage(id)}
+                        >
+                            <button>
+                                {title}
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </nav>
+    );
+};

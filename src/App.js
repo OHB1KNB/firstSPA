@@ -1,28 +1,30 @@
-import React, {useState} from 'react';
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
-import Content from "./components/content/content";
-import pagesData from "./mocks/pages.json"
+import React, { useState } from 'react';
 
-function App() {
-    const [currentPage, switchCurrentPage] = useState(0)
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
+import Content from './components/content/content';
+
+import pagesData from './mocks/pages.json';
+
+const App = () => {
+    const [currentPage, switchCurrentPage] = useState(0);
 
     const onSelectPageHandler = (index) => {
-        switchCurrentPage(index)
-    }
+        switchCurrentPage(index);
+    };
 
     return (
-      <div>
-        <Header
-            pages = {pagesData}
-            onChangePage = {onSelectPageHandler}
+        <div>
+            <Header
+                pages={pagesData}
+                onChangePage={onSelectPageHandler}
             />
-          <Content
-            page = {pagesData[currentPage]}
+            <Content
+                page={pagesData[currentPage]}
             />
-        <Footer/>
-      </div>
-  )
-}
+            <Footer />
+        </div>
+    );
+};
 
 export default App;

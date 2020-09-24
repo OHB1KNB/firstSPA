@@ -1,9 +1,14 @@
-import React from "react";
+import React from 'react';
 
-export default function Content(props) {
+export default function Content({ page }) {
     return (
+        <div>
+            <h1>
+                {page.title}
+            </h1>
             <div>
-                <h1>{props.page.content}</h1>
+                {page.content}
             </div>
+        </div>
     );
-}
+};
