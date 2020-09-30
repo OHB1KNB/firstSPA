@@ -1,20 +1,10 @@
 import React from 'react';
 import { switchPage } from '../../redux/actions';
-import { connect, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
-const mapStateToProps = state => {
-    return {
-        myPages: state.pages.pages,
-        myCurrentPage: state.currentPage
-    };
-};
-
-const mapDispatchToProps = {
-    switchPage: switchPage
-};
-
-const Header = ({ myPages }) => {
+const Header = () => {
     const dispatch = useDispatch();
+    const myPage = useSelector(state => state.pages.pages);
 
     return (
         <nav>
@@ -23,7 +13,7 @@ const Header = ({ myPages }) => {
                     id="nav-mobile"
                     className="left hide-on-med-and-down"
                 >
-                    {myPages.map(({ id, title }) => (
+                    {myPage.map(({ id, title }) => (
                         <li
                             key={id}
                             onClick={() => dispatch(switchPage(id))}
@@ -39,4 +29,4 @@ const Header = ({ myPages }) => {
     );
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default Header;

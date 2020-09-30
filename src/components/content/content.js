@@ -1,14 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 
-const mapStateToProps = state => {
-    return {
-        myPage: state.pages.pages,
-        myCurrentPage: state.pages.currentPage
-    };
-};
+const Content = () => {
+    const myPage = useSelector(state => state.pages.pages);
+    const myCurrentPage = useSelector(state => state.pages.currentPage);
 
-const Content = ({ myPage, myCurrentPage }) => {
     return (
         <div>
             <h1>
@@ -21,4 +17,4 @@ const Content = ({ myPage, myCurrentPage }) => {
     );
 };
 
-export default connect(mapStateToProps, null)(Content);
+export default Content;
