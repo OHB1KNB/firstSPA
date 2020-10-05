@@ -1,16 +1,21 @@
 import React from 'react';
 
 const Footer = () => {
+    const styles = {
+        div: {
+            backgroundColor: '#7f7679',
+            textAlign: 'right'
+        }
+    }
     return (
-        <footer className="page-footer">
-            <div className="container">
-                <div className="row">
-                    <div className="col l6 s12">
-                        <h5 className="white-text">
-                            Footer Content
-                        </h5>
-                    </div>
-                </div>
+        <footer>
+            <div style={styles.div}>
+                <h4 style={styles.h4}>
+                    Contacts
+                </h4>
+                <a href={'skype:darknight5022'}>
+                    Skype: darknight5022
+                </a>
             </div>
         </footer>
     );
