@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDispatch } from "react-redux";
 
-import Header from './components/header/header';
-import Footer from './components/footer/footer';
-import Content from './components/content/content';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Content from './components/Content/Content';
 import { fetchData } from "./redux/actions";
 
 import data from '../src/mocks/pages.json'

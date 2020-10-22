@@ -1,0 +1,16 @@
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 20px 150px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 2px;
+    width: 33%;
+}
