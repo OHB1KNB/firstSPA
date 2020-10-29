@@ -3,11 +3,13 @@ import { useDispatch } from "react-redux";
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import Content from './components/Content/Content';
+import Catalog from './components/Catalog/Catalog';
 import { fetchData } from "./redux/actions";
 
-import data from '../src/mocks/pages.json'
-
+import data from './mocks/catalog.json'
+import About from "./components/About/About";
+import Main from "./components/Main/Main";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 const App = () => {
     const dispatch = useDispatch();
@@ -15,9 +17,15 @@ const App = () => {
 
     return (
         <div>
-            <Header />
-            <Content />
-            <Footer />
+            <BrowserRouter>
+                <Header/>
+                    <Switch>
+                        <Route exact path={'/'} component={Main}/>
+                        <Route path={'/catalog'} component={Catalog}/>
+                        <Route path={'/about'} component={About}/>
+                    </Switch>
+                <Footer/>
+            </BrowserRouter>
         </div>
     );
 };

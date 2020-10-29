@@ -66,11 +66,11 @@ function registerValidSW(swUrl, config) {
         installingWorker.onstatechange = () => {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
-              // At this point, the updated precached Content has been fetched,
+              // At this point, the updated precached Catalog has been fetched,
               // but the previous service worker will still serve the older
-              // Content until all client tabs are closed.
+              // Catalog until all client tabs are closed.
               console.log(
-                'New Content is available and will be used when all ' +
+                'New Catalog is available and will be used when all ' +
                   'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
               );
 
@@ -81,8 +81,8 @@ function registerValidSW(swUrl, config) {
             } else {
               // At this point, everything has been precached.
               // It's the perfect time to display a
-              // "Content is cached for offline use." message.
-              console.log('Content is cached for offline use.');
+              // "Catalog is cached for offline use." message.
+              console.log('Catalog is cached for offline use.');
 
               // Execute callback
               if (config && config.onSuccess) {

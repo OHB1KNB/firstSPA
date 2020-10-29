@@ -1,17 +1,10 @@
 [
   {
-    "id": 0,
-    "title": "Cats",
-    "content": "meow"
+    "title": "Главная",
+    "content": "Welcome to the main page :)"
   },
   {
-    "id": 1,
-    "title": "Dogs",
-    "content": "gav"
-  },
-  {
-    "id": 2,
-    "title": "Hamsters",
-    "content": "no sound"
+    "title": "О компании",
+    "content": "Лучшая компания мира"
   }
 ]
