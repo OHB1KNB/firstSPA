@@ -10,6 +10,7 @@ const Footer = () => {
                 <h4>
                     Contacts
                 </h4>
+
                 <a href={'skype:darknight5022'}>
                     Skype: darknight5022
                 </a>

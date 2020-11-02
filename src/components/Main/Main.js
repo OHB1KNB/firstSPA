@@ -9,9 +9,10 @@ const Main = () => {
             <h1>
                 {pages[0].title}
             </h1>
-            <h3>
+
+            <h1>
                 {pages[0].content}
-            </h3>
+            </h1>
         </div>
     )
 }

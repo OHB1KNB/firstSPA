@@ -9,9 +9,10 @@ const About = () => {
             <h1>
                 {pages[1].title}
             </h1>
-            <h3>
+
+            <h1>
                 {pages[1].content}
-            </h3>
+            </h1>
         </div>
     )
 }

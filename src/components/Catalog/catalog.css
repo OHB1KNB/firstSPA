@@ -3,9 +3,17 @@ div {
 }
 
 .content {
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     font-size: 20px;
     text-align: left;
+}
+
+li {
+    float: left;
+}
+
+.catalogList {
+    float: none;
 }
 
 h1 {
