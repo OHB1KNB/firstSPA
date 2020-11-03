@@ -1,43 +1,26 @@
 import React from 'react';
-
 import { NavLink } from 'react-router-dom';
+
+import { mainMenu } from './constants';
 
 import './header.css';
 
-const Header = () => {
-
-    return (
-            <nav>
-                <ul>
-                    <li>
-                        <NavLink
-                            exact to='/'
-                            activeClassName='active'
-                        >
-                            Главная
-                        </NavLink>
-                    </li>
-
-                    <li>
-                        <NavLink
-                            to='/catalog'
-                            activeClassName='active'
-                        >
-                            Каталог
-                        </NavLink>
-                    </li>
-
-                    <li>
-                        <NavLink
-                            to='/about'
-                            activeClassName='active'
-                        >
-                            О компании
-                        </NavLink>
-                    </li>
-                </ul>
-            </nav>
-    );
-};
+const Header = () => (
+    <nav>
+        <ul>
+            {mainMenu.map(({ url, title }) => (
+                <li key={url}>
+                    <NavLink
+                        to={url}
+                        exact={true}
+                        activeClassName='active'
+                    >
+                        {title}
+                    </NavLink>
+                </li>
+            ))}
+        </ul>
+    </nav>
+);
 
 export default Header;

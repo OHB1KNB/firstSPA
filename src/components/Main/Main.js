@@ -2,19 +2,18 @@ import React from 'react';
 
 import pages from '../../mocks/pages.json';
 
-const Main = () => {
+const mainPageId = 0;
 
-    return (
-        <div>
-            <h1>
-                {pages[0].title}
-            </h1>
+const Main = () => (
+    <div>
+        <h1>
+            {pages[mainPageId].title}
+        </h1>
 
-            <h1>
-                {pages[0].content}
-            </h1>
-        </div>
-    )
-}
+        <h1>
+            {pages[mainPageId].content}
+        </h1>
+    </div>
+);
 
 export default Main;

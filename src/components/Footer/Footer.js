@@ -2,21 +2,18 @@ import React from 'react';
 
 import './footer.css';
 
-const Footer = () => {
+const Footer = () => (
+    <footer>
+        <div>
+            <h4>
+                Contacts
+            </h4>
 
-    return (
-        <footer>
-            <div>
-                <h4>
-                    Contacts
-                </h4>
-
-                <a href={'skype:darknight5022'}>
-                    Skype: darknight5022
-                </a>
-            </div>
-        </footer>
-    );
-};
+            <a href={'skype:darknight5022'}>
+                Skype: darknight5022
+            </a>
+        </div>
+    </footer>
+);
 
 export default Footer;

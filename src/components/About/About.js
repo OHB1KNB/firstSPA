@@ -3,7 +3,6 @@ import React from 'react';
 import pages from '../../mocks/pages.json';
 
 const About = () => {
-
     return (
         <div>
             <h1>
