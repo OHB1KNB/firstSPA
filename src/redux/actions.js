@@ -1,4 +1,4 @@
-import { FETCH_DATA, SWITCH_PAGE } from './types';
+import { FETCH_DATA, REQUEST_DATA, SWITCH_PAGE } from './types';
 
 export function switchPage(pageID) {
     return {
@@ -11,5 +11,11 @@ export function fetchData(data) {
     return {
         type: FETCH_DATA,
         payload: data
+    };
+}
+
+export function requestData() {
+    return {
+        type: REQUEST_DATA
     };
 }

@@ -4,9 +4,8 @@ import { useDispatch } from 'react-redux';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Catalog from './components/Catalog/Catalog';
-import { fetchData } from './redux/actions';
+import { requestData } from './redux/actions';
 
-import data from './mocks/catalog.json';
 import About from './components/About/About';
 import Main from './components/Main/Main';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
@@ -14,7 +13,7 @@ import { createBrowserHistory } from 'history';
 
 const App = () => {
     const dispatch = useDispatch();
-    dispatch(fetchData(data));
+    dispatch(requestData());
 
     const customHistory = createBrowserHistory();
 

@@ -10,9 +10,9 @@ const Main = () => (
             {pages[mainPageId].title}
         </h1>
 
-        <h1>
+        <h2>
             {pages[mainPageId].content}
-        </h1>
+        </h2>
     </div>
 );
 

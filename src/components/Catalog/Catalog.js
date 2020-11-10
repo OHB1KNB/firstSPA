@@ -1,28 +1,14 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { NavLink, Route, Switch, useParams, useRouteMatch } from 'react-router-dom';
+import { NavLink, Route, Switch, useRouteMatch } from 'react-router-dom';
+
+import CatalogItem from './components/CatalogItem';
 
 import './catalog.css';
 
 const Catalog = () => {
     const myPage = useSelector(state => state.pages.pages);
     const { path , url } = useRouteMatch();
-
-    const CatalogItem = () => {
-        const { itemId } = useParams();
-
-        return (
-            <div>
-                <h1>
-                    {myPage[itemId].title}
-                </h1>
-
-                <div className={'content'}>
-                    {myPage[itemId].content}
-                </div>
-            </div>
-        );
-    }
 
     return (
         <div>
