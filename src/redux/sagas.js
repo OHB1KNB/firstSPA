@@ -2,7 +2,7 @@ import { takeEvery, put } from 'redux-saga/effects';
 
 import { REQUEST_DATA } from './types';
 import { fetchData } from './actions';
-import data from '../mocks/catalog.json';
+import data from '../mocks/data.json';
 
 export function* sagaWatcher() {
    yield takeEvery(REQUEST_DATA, sagaWorker)

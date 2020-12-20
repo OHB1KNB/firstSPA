@@ -4,10 +4,9 @@ import { useDispatch } from 'react-redux';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Catalog from './components/Catalog/Catalog';
+import Page from "./components/Page/Page";
 import { requestData } from './redux/actions';
 
-import About from './components/About/About';
-import Main from './components/Main/Main';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
@@ -21,9 +20,9 @@ const App = () => {
         <BrowserRouter history={customHistory}>
             <Header/>
             <Switch>
-                <Route exact path={'/'} component={Main}/>
+                <Route exact path={'/'} component={() => <Page pageID={0}/>}/>
                 <Route path={'/catalog'} component={Catalog}/>
-                <Route path={'/about'} component={About}/>
+                <Route path={'/about'} component={() => <Page pageID={1}/>}/>
             </Switch>
             <Footer/>
         </BrowserRouter>

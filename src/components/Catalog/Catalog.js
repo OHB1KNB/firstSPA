@@ -7,7 +7,7 @@ import CatalogItem from './components/CatalogItem';
 import './catalog.css';
 
 const Catalog = () => {
-    const myPage = useSelector(state => state.pages.pages);
+    const myPage = useSelector(state => state.pages.catalog);
     const { path , url } = useRouteMatch();
 
     return (

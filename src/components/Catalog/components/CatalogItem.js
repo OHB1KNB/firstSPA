@@ -3,7 +3,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const CatalogItem = () => {
-    const myPage = useSelector(state => state.pages.pages);
+    const myPage = useSelector(state => state.pages.catalog);
     const { itemId } = useParams();
 
     return (

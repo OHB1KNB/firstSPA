@@ -6,7 +6,7 @@ import createSagaMiddleware from 'redux-saga';
 import { sagaWatcher } from './redux/sagas';
 
 import * as serviceWorker from './serviceWorker';
-import { rootReducer } from './redux/rootReducer';
+import { pageReducer } from "./redux/pageReducer";
 
 import App from './App';
 
@@ -14,7 +14,7 @@ import './index.css';
 
 const saga = createSagaMiddleware();
 
-const store = createStore(rootReducer, compose(
+const store = createStore(pageReducer, compose(
     applyMiddleware(saga),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 ));
